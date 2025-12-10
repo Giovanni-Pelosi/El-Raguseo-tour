@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Boat Virtual Tour</title>
+  <link rel="stylesheet" href="pannellum.css">
+  <script src="pannellum.js"></script>
+  <link rel="stylesheet" href="hotspots.css">
+  <style>
+    html, body { height: 100%; margin: 0; }
+    #panorama { width: 100%; height: 100%; }
+  </style>
+</head>
+<body>
+  <div id="panorama"></div>
+  <script>
+  function hotspotPulse(hotSpotDiv, args) {
+    hotSpotDiv.classList.add('pulseHotspot');
+    if (args && args.title) hotSpotDiv.setAttribute('title', args.title);
+  }
+</script>
+  <script>
+    pannellum.viewer('panorama', {
+      "default": {
+        "firstScene": "cockpit_4",
+        "sceneFadeDuration": 1000,
+        "hotSpotDebug": true
+      },
+      "scenes": {
+        "cockpit_1": {
+          "title": "Cockpit",
+          "hfov": 120,
+          "pitch": -8,
+          "yaw": -13,
+          "type": "equirectangular",
+          "panorama": "images/scene_15.jpg",
+          "hotSpots": [
+            {
+              "pitch": 41.879202307404995,
+              "yaw": 0.03507278236121536,
+              "type": "scene",
+              "sceneId": "cockpit_2",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },{
+              "pitch": -58.37,
+              "yaw": -64.49,
+              "type": "scene",
+              "sceneId": "rudder_1",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            }
+          ]
+        },
+        "rudder_1": {
+          "title": "rudder_1",
+          "hfov": 75,
+          "pitch": -2.52,
+          "yaw": 61.41,
+          "type": "equirectangular",
+          "panorama": "images/scene_16.jpg",
+          "hotSpots": [
+            {
+              "pitch": 59.64,
+              "yaw": 106.55,
+              "type": "scene",
+              "sceneId": "cockpit_1",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            }
+          ]
+        },
+        "cockpit_2": {
+          "title": "",
+          "hfov": 110,
+          "pitch": -40,
+          "yaw": -3,
+          "type": "equirectangular",
+          "panorama": "images/scene_14.jpg",
+          "hotSpots": [
+            {
+              "pitch": -39.5,
+              "yaw": 177.7,
+              "type": "scene",
+              "sceneId": "cockpit_1",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": -46.90,
+              "yaw": -3.96,
+              "type": "scene",
+              "sceneId": "cockpit_3",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": 1.72,
+              "yaw": -3.85,
+              "type": "scene",
+              "sceneId": "cockpit_4",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": -12.792584424153347,
+              "yaw": -34.1301779065725,
+              "type": "scene",
+              "sceneId": "sidewalk_left_1",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            }
+          ]
+        },
+        "cockpit_3": {
+          "title": "",
+          "hfov": 80,
+          "pitch": -19.2,
+          "yaw": -1.5,
+          "type": "equirectangular",
+          "panorama": "images/scene_13.jpg",
+          "hotSpots": [
+            {
+              "pitch": -1.6,
+              "yaw": -178.3,
+              "type": "scene",
+              "sceneId": "cockpit_2",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": 6.5,
+              "yaw": 0.35,
+              "type": "scene",
+              "sceneId": "cockpit_4",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            }
+          ]
+        },
+        "cockpit_4": {
+          "title": "",
+          "hfov": 80,
+          "pitch": -19.2,
+          "yaw": -1.5,
+          "type": "equirectangular",
+          "panorama": "images/scene_4.jpg",
+          "hotSpots": [
+            {
+              "pitch": -42.85,
+              "yaw": 175.04,
+              "type": "scene",
+              "sceneId": "cockpit_3",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": 12.03,
+              "yaw": -3.27,
+              "type": "scene",
+              "sceneId": "deckhouse_1",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": -51.66,
+              "yaw": -2.55,
+              "type": "scene",
+              "sceneId": "gate_1",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": -19.86,
+              "yaw": -62.25,
+              "type": "scene",
+              "sceneId": "sidewalk_left_1",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": -6.28,
+              "yaw": -21.85,
+              "type": "scene",
+              "sceneId": "sidewalk_left_2",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": -0.62,
+              "yaw": -4.65,
+              "type": "scene",
+              "sceneId": "bow_2",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": -12.08,
+              "yaw": 175.68,
+              "type": "scene",
+              "sceneId": "cockpit_1",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            }
+          ]
+        },
+        "deckhouse_1": {
+          "title": "",
+          "hfov": 80,
+          "pitch": -19.2,
+          "yaw": -1.5,
+          "type": "equirectangular",
+          "panorama": "images/scene_5.jpg",
+          "hotSpots": [
+            {
+              "pitch": -36.75,
+              "yaw": 178.94,
+              "type": "scene",
+              "sceneId": "cockpit_4",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": -39.5,
+              "yaw": -99.7,
+              "type": "scene",
+              "sceneId": "sidewalk_left_1",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": -5.37,
+              "yaw": 0.47,
+              "type": "scene",
+              "sceneId": "deckhouse_2",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": -15.83,
+              "yaw": -24.24,
+              "type": "scene",
+              "sceneId": "sidewalk_left_2",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": -8.50,
+              "yaw": -178.95,
+              "type": "scene",
+              "sceneId": "cockpit_2",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            }
+          ]
+        },
+        "sidewalk_left_1": {
+          "title": "",
+          "hfov": 80,
+          "pitch": -10.85,
+          "yaw": 20.39,
+          "type": "equirectangular",
+          "panorama": "images/scene_6.jpg",
+          "hotSpots": [
+            {
+              "pitch": 24.5,
+              "yaw": 69.77,
+              "type": "scene",
+              "sceneId": "deckhouse_1",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": 13.11,
+              "yaw": 21.27,
+              "type": "scene",
+              "sceneId": "deckhouse_2",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": -0.53,
+              "yaw": -7.99,
+              "type": "scene",
+              "sceneId": "sidewalk_left_2",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            }
+          ]
+        },
+        "sidewalk_left_2": {
+          "title": "",
+          "hfov": 80,
+          "pitch": -21.5,
+          "yaw": -1.7,
+          "type": "equirectangular",
+          "panorama": "images/scene_8.jpg",
+          "hotSpots": [
+            {
+              "pitch": 16.52,
+              "yaw": -29.48,
+              "type": "scene",
+              "sceneId": "deckhouse_2",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": -0.47,
+              "yaw": 12.93,
+              "type": "scene",
+              "sceneId": "sidewalk_left_1",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            }
+          ]
+        },
+        "deckhouse_2": {
+          "title": "",
+          "hfov": 80,
+          "pitch": -21.5,
+          "yaw": -1.7,
+          "type": "equirectangular",
+          "panorama": "images/scene_7.jpg",
+          "hotSpots": [
+            {
+              "pitch": -11.45,
+              "yaw": 179.74,
+              "type": "scene",
+              "sceneId": "deckhouse_1",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": -26.31,
+              "yaw": -138.24,
+              "type": "scene",
+              "sceneId": "sidewalk_left_1",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": -23.48,
+              "yaw": -28.94,
+              "type": "scene",
+              "sceneId": "sidewalk_left_2",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": -21.58,
+              "yaw": -1.78,
+              "type": "scene",
+              "sceneId": "bow_1",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": -88.67,
+              "yaw": -171.04,
+              "type": "scene",
+              "sceneId": "hallway_1",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": -41.21,
+              "yaw": -3.36,
+              "type": "scene",
+              "sceneId": "bow_cabin_1",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            }
+          ]
+        },
+        "bow_1": {
+          "title": "",
+          "hfov": 51.29,
+          "pitch": -47.75,
+          "yaw": 173.64,
+          "type": "equirectangular",
+          "panorama": "images/scene_9.jpg",
+          "hotSpots": [
+            {
+              "pitch": -0.18,
+              "yaw": -11.92,
+              "type": "scene",
+              "sceneId": "deckhouse_2",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": -13.69,
+              "yaw": 4.95,
+              "type": "scene",
+              "sceneId": "sidewalk_left_1",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": -29.09,
+              "yaw": 20.38,
+              "type": "scene",
+              "sceneId": "sidewalk_left_2",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": -39.43,
+              "yaw": 166.58,
+              "type": "scene",
+              "sceneId": "bow_2",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": -38.68,
+              "yaw": -18.61,
+              "type": "scene",
+              "sceneId": "hallway_1",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            }
+          ]
+        },
+        "bow_2": {
+          "title": "",
+          "hfov": 51.29,
+          "pitch": -24.62,
+          "yaw": 1.5,
+          "type": "equirectangular",
+          "panorama": "images/scene_10.jpg",
+          "hotSpots": [
+            {
+              "pitch": 5.63,
+              "yaw": -5.53,
+              "type": "scene",
+              "sceneId": "deckhouse_2",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": -3.82,
+              "yaw": 8.68,
+              "type": "scene",
+              "sceneId": "sidewalk_left_1",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": -19.73,
+              "yaw": 17.40,
+              "type": "scene",
+              "sceneId": "sidewalk_left_2",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": -15.84,
+              "yaw": -7.49,
+              "type": "scene",
+              "sceneId": "bow_1",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            }
+          ]
+        },
+        "gate_1": {
+          "title": "",
+          "hfov": 90.29,
+          "pitch": -45.78,
+          "yaw": 342.72,
+          "type": "equirectangular",
+          "panorama": "images/scene_33.jpg",
+          "hotSpots": [
+            {
+              "pitch": 36.130798244708735,
+              "yaw": 164.97,
+              "type": "scene",
+              "sceneId": "cockpit_4",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": -73.29,
+              "yaw": -20.47,
+              "type": "scene",
+              "sceneId": "dinette_1",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": -45.33,
+              "yaw": -18.08,
+              "type": "scene",
+              "sceneId": "dinette_2",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": -15.90,
+              "yaw": -17.17,
+              "type": "scene",
+              "sceneId": "dinette_3",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": -10.72,
+              "yaw": -8.49,
+              "type": "scene",
+              "sceneId": "hallway_1",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": 1.943063043607766,
+              "yaw": 164.87609639994227,
+              "type": "scene",
+              "sceneId": "cockpit_2",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            }
+          ]
+        },
+        "dinette_1": {
+          "title": "",
+          "hfov": 92.16,
+          "pitch": -5.92,
+          "yaw": 175.71,
+          "type": "equirectangular",
+          "panorama": "images/scene_24.jpg",
+          "hotSpots": [
+            {
+              "pitch": 77.32,
+              "yaw": 8.09,
+              "type": "scene",
+              "sceneId": "gate_1",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": -5.94,
+              "yaw": 173.92,
+              "type": "scene",
+              "sceneId": "dinette_2",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            }
+          ]
+        },
+        "dinette_2": {
+          "title": "",
+          "hfov": 92.16,
+          "pitch": -5.92,
+          "yaw": 175.71,
+          "type": "equirectangular",
+          "panorama": "images/scene_23.jpg",
+          "hotSpots": [
+            {
+              "pitch": 27.23,
+              "yaw": -2.42,
+              "type": "scene",
+              "sceneId": "gate_1",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": -13.39,
+              "yaw": -2.03,
+              "type": "scene",
+              "sceneId": "dinette_1",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": -8.95,
+              "yaw": 174.62,
+              "type": "scene",
+              "sceneId": "dinette_3",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": -1.98,
+              "yaw": -173.98,
+              "type": "scene",
+              "sceneId": "hallway_1",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            }
+          ]
+        },
+        "dinette_3": {
+          "title": "",
+          "hfov": 92.16,
+          "pitch": -4.23,
+          "yaw": 3.01,
+          "type": "equirectangular",
+          "panorama": "images/scene_22.jpg",
+          "hotSpots": [
+            {
+              "pitch": 11.11,
+              "yaw": 2.15,
+              "type": "scene",
+              "sceneId": "gate_1",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": -16.85,
+              "yaw": 2.75,
+              "type": "scene",
+              "sceneId": "dinette_2",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": -13.3,
+              "yaw": -142.01,
+              "type": "scene",
+              "sceneId": "hallway_1",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            }
+          ]
+        },
+        "hallway_1": {
+          "title": "",
+          "hfov": 92.16,
+          "pitch": -8.14,
+          "yaw": 194.59,
+          "type": "equirectangular",
+          "panorama": "images/scene_20.jpg",
+          "hotSpots": [
+            {
+              "pitch": 8.63,
+              "yaw": 30.20,
+              "type": "scene",
+              "sceneId": "gate_1",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": -7.98,
+              "yaw": 31.84,
+              "type": "scene",
+              "sceneId": "dinette_2",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": -16.90,
+              "yaw": 117.76,
+              "type": "scene",
+              "sceneId": "toilet_1",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": 49.72,
+              "yaw": 73.54,
+              "type": "scene",
+              "sceneId": "deckhouse_2",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": -10.75,
+              "yaw": -173.35,
+              "type": "scene",
+              "sceneId": "bow_cabin_1",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": 26.25,
+              "yaw": -177.61,
+              "type": "scene",
+              "sceneId": "bow_1",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            }
+          ]
+        },
+        "toilet_1": {
+          "title": "",
+          "hfov": 71.28,
+          "pitch": 2.02,
+          "yaw": -311.71,
+          "type": "equirectangular",
+          "panorama": "images/scene_21.jpg",
+          "hotSpots": [
+            {
+              "pitch": -16.25,
+              "yaw": 172.84,
+              "type": "scene",
+              "sceneId": "hallway_1",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            }
+          ]
+        },
+        "bow_cabin_1": {
+          "title": "",
+          "hfov": 68.60,
+          "pitch": -23.72,
+          "yaw": -184.2,
+          "type": "equirectangular",
+          "panorama": "images/scene_19.jpg",
+          "hotSpots": [
+            {
+              "pitch": -11.21,
+              "yaw": -18.98,
+              "type": "scene",
+              "sceneId": "hallway_1",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": -0.06,
+              "yaw": 177.02,
+              "type": "scene",
+              "sceneId": "bow_cabin_2",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": 83.47,
+              "yaw": 47.01,
+              "type": "scene",
+              "sceneId": "bow_1",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            }
+          ]
+        },
+        "bow_cabin_2": {
+          "title": "",
+          "hfov": 81.89,
+          "pitch": -7.48,
+          "yaw": -353.11,
+          "type": "equirectangular",
+          "panorama": "images/scene_17.jpg",
+          "hotSpots": [
+            {
+              "pitch": -15.09,
+              "yaw": -4.37,
+              "type": "scene",
+              "sceneId": "hallway_1",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            },
+            {
+              "pitch": -21.13,
+              "yaw": 4.10,
+              "type": "scene",
+              "sceneId": "bow_cabin_1",
+              "text": "",
+              "createTooltipFunc": hotspotPulse,
+              "createTooltipArgs": {}
+            }
+          ]
+        }
+      }
+    });
+  </script>
+</body>
+</html>

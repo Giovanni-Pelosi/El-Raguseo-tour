@@ -6,12 +6,19 @@
   <link rel="stylesheet" href="pannellum.css">
   <script src="pannellum.js"></script>
   <link rel="stylesheet" href="hotspots.css">
+  <link rel="stylesheet" href="style.css">
   <style>
     html, body { height: 100%; margin: 0; }
     #panorama { width: 100%; height: 100%; }
   </style>
 </head>
 <body>
+  <!-- Header with title, subtitle, and date -->
+  <div id="header">
+    <h1>El Raguseo</h1>
+    <h2>360 boat tour</h2>
+    <p>State of work: November 2025</p>
+  </div>
   <div id="panorama"></div>
   <script>
   function hotspotPulse(hotSpotDiv, args) {
@@ -23,7 +30,9 @@
     pannellum.viewer('panorama', {
       "default": {
         "firstScene": "cockpit_4",
-        "sceneFadeDuration": 1000
+        "sceneFadeDuration": 1000,
+         "autoLoad": true
+        //"hotSpotDebug": true
       },
       "scenes": {
         "cockpit_1": {
